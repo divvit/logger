@@ -1,5 +1,5 @@
 {
-   "name": "@divvit/logging",
+   "name": "@divvit/logger",
    "version": "1.0.0",
    "description": "Divvit logging service.",
    "main": "index.js",
@@ -8,12 +8,12 @@
    },
    "repository": {
       "type": "git",
-      "url": "https://github.com/divvit/logging.git"
+      "url": "https://github.com/divvit/logger.git"
    },
    "author": "Nino Ulsamer <nino@divvit.com> (http://www.divvit.com/)",
    "license": "MIT",
    "bugs": {
-      "url": "https://github.com/divvit/logging/issues"
+      "url": "https://github.com/divvit/logger/issues"
    },
    "dependencies": {
       "le_node": "^1.2.0",
