@@ -1,0 +1,10 @@
+{
+   "defaultLogLevel": "debug",
+
+   "loggers": {
+      "console": {
+         "logLevel": "debug"
+      }
+   }
+
+}

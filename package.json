@@ -1,0 +1,30 @@
+{
+   "name": "@divvit/logging",
+   "version": "1.0.0",
+   "description": "Divvit logging service.",
+   "main": "index.js",
+   "scripts": {
+      "test": "./node_modules/.bin/mocha"
+   },
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/divvit/logging.git"
+   },
+   "author": "Nino Ulsamer <nino@divvit.com> (http://www.divvit.com/)",
+   "license": "MIT",
+   "bugs": {
+      "url": "https://github.com/divvit/logging/issues"
+   },
+   "dependencies": {
+      "le_node": "^1.2.0",
+      "colors": "^1.1.2",
+      "moment": "^2.11.2"
+   },
+   "devDependencies": {
+      "chai": "^3.4.1",
+      "mocha": "^2.3.4",
+      "sinon": "1.17.2",
+      "sinon-chai": "2.8.0",
+      "proxyquire": "1.7.4"
+   }
+}
