@@ -98,14 +98,27 @@ LogService.prototype.fatal = function() {
 
 LogService.prototype.normalizeArgs = function(args) {
    // turn into array
-   return (args.length === 1 ? [args[0]] : Array.apply(null, args));
+   var argList = (args.length === 1 ? [args[0]] : Array.apply(null, args));
+
+   var processedArgs = [];
+   argList.forEach(function(arg) {
+      if (arg.stack) {
+         // for errors
+         processedArgs.push(arg.stack);
+      } else {
+         processedArgs.push(arg);
+      }
+   });
+
+   return processedArgs;
 };
 
 LogService.prototype.log = function(logLevel, args) {
    if (this.loggers) {
       this.loggers.forEach(function(logger) {
-         if (this.shouldLog(logger, logLevel))
+         if (this.shouldLog(logger, logLevel)) {
             logger.log(logLevel, args);
+         }
       }.bind(this));
    }
 };
