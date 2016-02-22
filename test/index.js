@@ -40,5 +40,11 @@ describe('logging', function() {
          console.log.getCalls()[0].args[0][0].should.contain(' at ');
 
       });
+
+      it('should not crash when logging "undefined"', function() {
+         var logger = require('./../index');
+
+         logger.debug(undefined);
+      });
    });
 });

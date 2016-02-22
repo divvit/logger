@@ -37,3 +37,4 @@ Nino Ulsamer, Divvit AB
 
 * 1.0.0 Initial release
 * 1.0.1 Log error stack trace if available
+* 1.0.2 Bugfix: don't break when logging undefined

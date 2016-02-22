@@ -102,7 +102,7 @@ LogService.prototype.normalizeArgs = function(args) {
 
    var processedArgs = [];
    argList.forEach(function(arg) {
-      if (arg.stack) {
+      if (arg && arg.stack) {
          // for errors
          processedArgs.push(arg.stack);
       } else {
