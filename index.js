@@ -3,6 +3,7 @@
 var ConsoleLogger = require('./loggers/console');
 var LogentriesLogger = require('./loggers/logentries');
 var logPriorities = require('./log-priorities');
+var async = require('async');
 
 var RELOAD_ENV_INTERVAL = 30 * 1000;      // reload config from ENV every 30 sec
 
@@ -42,6 +43,20 @@ LogService.prototype.configure = function(config) {
 
    this.saveConfigInEnvironment();
    this.configureLoggers();
+};
+
+LogService.prototype.cleanup = function(callback) {
+   async.each(this.loggers,
+      function foreach(item, callback) {
+         if (item.cleanup)
+            item.cleanup(callback);
+         else
+            async.setImmediate(callback);
+      },
+      function completed(err) {
+         callback(err);
+      }
+   );
 };
 
 LogService.prototype.configureLoggers = function() {

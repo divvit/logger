@@ -46,5 +46,24 @@ describe('logging', function() {
 
          logger.debug(undefined);
       });
+
+      it('should clean up', function(done) {
+         this.timeout(10000);
+
+         var logger = require('./../index');
+         logger.configure({
+            loggers: {
+               logentries: {
+                  token: 'dac6b4a1-18be-453e-80b9-f89fdf28254a'
+               }
+            }
+         });
+
+         logger.cleanup(function(err) {
+            should.not.exist(err);
+
+            done();
+         });
+      });
    });
 });

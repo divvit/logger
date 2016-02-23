@@ -1,6 +1,6 @@
 {
    "name": "@divvit/logger",
-   "version": "1.0.2",
+   "version": "1.0.3",
    "description": "Divvit logging service.",
    "main": "index.js",
    "scripts": {
@@ -18,7 +18,8 @@
    "dependencies": {
       "le_node": "^1.2.0",
       "colors": "^1.1.2",
-      "moment": "^2.11.2"
+      "moment": "^2.11.2",
+      "async": "^1.5.2"
    },
    "devDependencies": {
       "chai": "^3.4.1",

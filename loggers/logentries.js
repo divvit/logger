@@ -25,3 +25,11 @@ LogentriesLogger.prototype.log = function(logLevel, args) {
       this.logentries.log(logLevelMapping[logLevel], arg);
    }.bind(this));
 };
+
+LogentriesLogger.prototype.cleanup = function(callback) {
+   // this is the recommended way which doesn't work...
+   //this.logentries.once('connection drain', () => callback());
+
+   // so let's just give the app a few seconds to send the final log events
+   setTimeout(callback, 2000);
+};
