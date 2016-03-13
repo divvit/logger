@@ -25,7 +25,7 @@ LogentriesLogger.prototype.log = function(logLevel, args) {
       // call asynchronously, otherwise we can encounter buffer overflow errors
       setImmediate(function() {
          this.logentries.log(logLevelMapping[logLevel], arg);
-      });
+      }.bind(this));
    }.bind(this));
 };
 
