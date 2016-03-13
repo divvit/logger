@@ -22,7 +22,10 @@ var LogentriesLogger = module.exports = function(config) {
 
 LogentriesLogger.prototype.log = function(logLevel, args) {
    args.forEach(function(arg) {
-      this.logentries.log(logLevelMapping[logLevel], arg);
+      // call asynchronously, otherwise we can encounter buffer overflow errors
+      setImmediate(function() {
+         this.logentries.log(logLevelMapping[logLevel], arg);
+      });
    }.bind(this));
 };
 
