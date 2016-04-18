@@ -41,3 +41,4 @@ Nino Ulsamer, Divvit AB
 * 1.0.3 Added cleanup method to make sure we send last error event to logentries
 * 1.0.4 Call logentries asynchronously
 * 1.0.5 Bugfix for logentries sending
+* 1.0.6 Don't log to logentries with log level

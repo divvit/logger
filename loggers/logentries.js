@@ -16,7 +16,7 @@ var LogentriesLogger = module.exports = function(config) {
       console.log('Divvit logger: no logentries token supplied, will not log to logentries.');
       this.logentries = undefined;
    } else {
-      this.logentries = new LeNode({ token: config.token });
+      this.logentries = new LeNode({ token: config.token, withLevel: false, timestamp: false });
    }
 };
 
