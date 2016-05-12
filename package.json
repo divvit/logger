@@ -1,6 +1,6 @@
 {
    "name": "@divvit/logger",
-   "version": "1.0.6",
+   "version": "1.0.7",
    "description": "Divvit logging service.",
    "main": "index.js",
    "scripts": {

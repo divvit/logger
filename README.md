@@ -42,3 +42,4 @@ Nino Ulsamer, Divvit AB
 * 1.0.4 Call logentries asynchronously
 * 1.0.5 Bugfix for logentries sending
 * 1.0.6 Don't log to logentries with log level
+* 1.0.7 Send correct log level to logentries
